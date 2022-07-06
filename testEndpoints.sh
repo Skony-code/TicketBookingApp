@@ -1,0 +1,3 @@
+curl 'http://localhost:8080/api/screenings?from=2022-06-19%2010:29&to=2022-06-21%2010:30'
+curl 'http://localhost:8080/api/screening?id=1'
+curl --header "Content-Type: application/json" --request PUT --data '{"name":"Aaaa","sureName":"Aaaa","screeningId":"1","tickets":[{"seatRow":"C","seatCol":"3","ticketType":"adult"},{"seatRow":"C","seatCol":"2","ticketType":"child"}]}' http://localhost:8080/api/reserve
