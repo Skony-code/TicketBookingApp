@@ -7,7 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import skoneczny.touk.ticketbookingapp.dto.ReservationRequestDTO;
 import skoneczny.touk.ticketbookingapp.dto.ScreeningDTO;
-import skoneczny.touk.ticketbookingapp.exception.ReservationException;
+import skoneczny.touk.ticketbookingapp.exceptions.ReservationException;
 import skoneczny.touk.ticketbookingapp.services.ReservationService;
 import skoneczny.touk.ticketbookingapp.services.ScreeningService;
 
