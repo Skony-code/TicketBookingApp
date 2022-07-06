@@ -4,11 +4,11 @@ import lombok.Builder;
 import lombok.Data;
 import skoneczny.touk.ticketbookingapp.dao.Seat;
 
-import java.util.Set;
+import java.util.List;
 
 @Data
 @Builder
 public class ScreeningSeatsDTO {
     int screeningRoomNumber;
-    Set<Seat> availableSeats;
+    List<Seat> availableSeats;
 }

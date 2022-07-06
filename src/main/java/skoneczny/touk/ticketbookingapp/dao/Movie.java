@@ -17,7 +17,7 @@ import javax.persistence.Id;
 @Builder
 public class Movie {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int Id;
-    private String Name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    private String name;
 }

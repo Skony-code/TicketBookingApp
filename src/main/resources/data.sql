@@ -138,4 +138,6 @@ INSERT INTO SCREENING(id,start_time,movie_id,room_id) VALUES (8,PARSEDATETIME('2
 --21.06 17:30
 INSERT INTO SCREENING(id,start_time,movie_id,room_id) VALUES (9,PARSEDATETIME('21-06-2022 17:30', 'dd-MM-yyyy HH:mm'),3,3);
 
+INSERT INTO TICKET(screening_id,seat_id,price) VALUES (1,2,12.5);
+INSERT INTO TICKET(screening_id,seat_id,price) VALUES (1,3,12.5);
 COMMIT;

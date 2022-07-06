@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -15,8 +16,8 @@ import java.util.Set;
 @Builder
 public class Room {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     int id;
     @ManyToMany
-    private Set<Seat> seats;
+    private List<Seat> seats;
 }

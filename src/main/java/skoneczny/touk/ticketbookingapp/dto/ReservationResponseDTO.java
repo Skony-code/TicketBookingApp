@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Builder;
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
 public class ReservationResponseDTO {
     private Float totalPrice;
-    @JsonFormat(pattern = "yyyy-mm-dd hh:MM")
-    private LocalDate expirationDate;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm")
+    private LocalDateTime expirationDate;
 }

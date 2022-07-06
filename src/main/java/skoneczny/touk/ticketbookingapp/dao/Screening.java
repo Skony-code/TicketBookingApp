@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,13 +17,13 @@ import java.util.Set;
 @Builder
 public class Screening {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private LocalDateTime startTime;
     @ManyToOne
     private Room room;
     @ManyToOne
     private Movie movie;
-    @OneToMany(mappedBy = "screening")
-    private Set<Ticket> tickets;
+    @OneToMany(mappedBy = "screening",fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
+    private List<Ticket> tickets;
 }

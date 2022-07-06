@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -15,10 +16,10 @@ import java.util.Set;
 @Builder
 public class Reservation {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private String name;
     private String surname;
-    @OneToMany
-    private Set<Ticket> tickets;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Ticket> tickets;
 }
